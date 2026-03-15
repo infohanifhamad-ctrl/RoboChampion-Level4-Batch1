@@ -1,0 +1,91 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="lsWXf;In,6=xa#ssqmCi" x="385" y="30">
+    <statement name="LOOP_FUNC">
+      <block type="procedures_callnoreturn" id="hvw!/t*iTeRuRn:m_s}y">
+        <mutation name="show7"></mutation>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="D4*2{oYuKmTN:Ag`Xm:N" x="160" y="251">
+    <field name="NAME">show7</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="io_digitalwrite" id="/XB!Ko4ex_@K..Xsl/N`">
+        <field name="PIN">2</field>
+        <value name="STATE">
+          <block type="io_highlow" id="}|0i-v%PCcdphDPMnZs%">
+            <field name="STATE">HIGH</field>
+          </block>
+        </value>
+        <next>
+          <block type="io_digitalwrite" id="f+:[/LtR77E0#16fYh.7">
+            <field name="PIN">7</field>
+            <value name="STATE">
+              <block type="io_highlow" id="gHsH~|?sLwzTJtES@;Iz">
+                <field name="STATE">HIGH</field>
+              </block>
+            </value>
+            <next>
+              <block type="io_digitalwrite" id="4ShgIIW?tI.}|PW=AgM,">
+                <field name="PIN">8</field>
+                <value name="STATE">
+                  <block type="io_highlow" id="*ziQb,c19ad9#JvnjO(S">
+                    <field name="STATE">HIGH</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="time_delay" id="uxYj?wXW!duP-[:fY%q4">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="H-#ay,wkG|Hh4tD:^ew{">
+                        <field name="NUM">1000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="io_digitalwrite" id=")Yc_V9_D2Ae@Q!7?jm%{">
+                        <field name="PIN">2</field>
+                        <value name="STATE">
+                          <block type="io_highlow" id="5aFUCKd4%Tfoyl43SHJy">
+                            <field name="STATE">LOW</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_digitalwrite" id="`i}mU{3DRt69VNmXdUJ:">
+                            <field name="PIN">7</field>
+                            <value name="STATE">
+                              <block type="io_highlow" id="7KW3Gt-QMeATd09^r)Uf">
+                                <field name="STATE">LOW</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="io_digitalwrite" id="+=HFw~=QK4T%Lr`S2Q?m">
+                                <field name="PIN">8</field>
+                                <value name="STATE">
+                                  <block type="io_highlow" id="Sk)]T9W%Z2gm]m7tXCo8">
+                                    <field name="STATE">LOW</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="time_delay" id="*;Pd;3qR@h`t=v%XWtb^">
+                                    <value name="DELAY_TIME_MILI">
+                                      <block type="math_number" id="a9fJ]h(qi8|j;{,g%u_N">
+                                        <field name="NUM">1000</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
