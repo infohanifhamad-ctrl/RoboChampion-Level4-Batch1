@@ -1,0 +1,66 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="A(m0O|9zfyQ#umA8ar*." x="308" y="21">
+    <statement name="LOOP_FUNC">
+      <block type="controls_if" id="tTVZ(Y,(jARi+3M(6VHX">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="variables_get" id=";xIH|x~G,t@3-.fJH]kb">
+            <field name="VAR">PIR output</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="z^%z-N[O^kviUU!7WwUh">
+            <mutation name="LED on"></mutation>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="procedures_callnoreturn" id="Mj)dRn[uRNw)@RRQd4@*">
+            <mutation name="LED off"></mutation>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="kHVLv8l0[|J*rk9j`{-s" x="298" y="214">
+    <field name="NAME">PIR</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="?RE7Oc#r|n_}?Hrx2LnY">
+        <field name="VAR">PIR output</field>
+        <value name="VALUE">
+          <block type="io_digitalread" id="9WoM#KcU-uX`6{gtMObf">
+            <field name="PIN">5</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="xO3=*(O7ta_ht8~6h5iw" x="324" y="342">
+    <field name="NAME">LED on</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="io_digitalwrite" id="WepiT]zzY`ODebE6]#B/">
+        <field name="PIN">7</field>
+        <value name="STATE">
+          <block type="io_highlow" id="V9es,*sV#42-jt5I=IAl">
+            <field name="STATE">HIGH</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="]pc`L#.J[@GLN3}7y2O*" x="321" y="490">
+    <field name="NAME">LED off</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="io_digitalwrite" id="a]*02=KkLr/00p=NBNvv">
+        <field name="PIN">7</field>
+        <value name="STATE">
+          <block type="io_highlow" id="@W2KgpgU5Zd{`Ro!:=Qq">
+            <field name="STATE">LOW</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
