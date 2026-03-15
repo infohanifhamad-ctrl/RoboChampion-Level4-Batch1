@@ -1,0 +1,82 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="dgaw}]X89qV|B@XJJK[H" x="252" y="32">
+    <statement name="SETUP_FUNC">
+      <block type="variables_set" id="_L02%It`a2IYtg;S65yo">
+        <field name="VAR">irOutput</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="p1*b%s{^seaZ]1Zvr3-5">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <statement name="LOOP_FUNC">
+      <block type="procedures_callnoreturn" id="XPYIE6J#6r_fJ]:)~81I">
+        <mutation name="do something"></mutation>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="U]I(ysXlljtB~zsQ{v53" x="225" y="188">
+    <field name="NAME">readIRoutput</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="SpypPTMPH%W1U^/K[[c2">
+        <field name="VAR">irOutput</field>
+        <value name="VALUE">
+          <block type="io_digitalread" id="?lNo`2EaNMU!EV2;*7Io">
+            <field name="PIN">2</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="logic_compare" id="`~?+35It|K{Ezv6p/u?8">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <block type="variables_get" id="%m3%A5+s[DHaF8n+mY*8">
+            <field name="VAR">irOutput</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="a.*_DdJR_htaj/r}~-TY">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="AwBGqyopvyzH8JNdDRcD" x="240" y="327">
+    <field name="NAME">do something</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="5R|cf6D8-rUZb+cfXh{a">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="procedures_callreturn" id="EPuHlHo28-?f8ISG:7oP">
+            <mutation name="readIRoutput"></mutation>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="io_digitalwrite" id="XWcTeVua1j=I290RfE;c">
+            <field name="PIN">3</field>
+            <value name="STATE">
+              <block type="io_highlow" id="{yrWAr]dL,,e9m4j0RWW">
+                <field name="STATE">HIGH</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="io_digitalwrite" id="|(Q0W%n~v1?9nz?;;6=F">
+            <field name="PIN">3</field>
+            <value name="STATE">
+              <block type="io_highlow" id="=:eMuAsf}/NNQZ~c`Ao0">
+                <field name="STATE">LOW</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
