@@ -1,0 +1,128 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="T~%Gc|%q)ZwM_ZyVcM82" x="350" y="21">
+    <statement name="LOOP_FUNC">
+      <block type="procedures_callnoreturn" id="A/2(`{IX7~M{s[Da:1Ye">
+        <mutation name="fade in"></mutation>
+        <next>
+          <block type="procedures_callnoreturn" id="N?K(iLO*V0am|P%,hbkx">
+            <mutation name="fade out"></mutation>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="awXzGc|^R7F?@aYrzquW" x="15" y="97">
+    <field name="NAME">fade in</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="ZXY+{IZn2bJHsTqxbCst">
+        <field name="VAR">bright ness</field>
+        <value name="VALUE">
+          <block type="math_number" id="9?sCX6W`;-COl:O#qd2h">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_repeat_ext" id="F*__d25BoQxI`A*ld0|`">
+            <value name="TIMES">
+              <block type="math_number" id="Fv@T-nL(8wu*4q*u~BS)">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="io_digitalwrite" id="=[qi.lMv+]SD-am=DD|:">
+                <field name="PIN">11</field>
+                <value name="STATE">
+                  <block type="variables_get" id="F6[dgsneUVcVt]/5#Jjm">
+                    <field name="VAR">bright ness</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="4ZplZh~_#5mTafGN5WW7">
+                    <field name="VAR">bright ness</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="Q6sDi6ZYD7c5w1~4Q!Za">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="variables_get" id="-`3FLp^,IysJQD`%x!Q{">
+                            <field name="VAR">bright ness</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="|RC#EA@mAkJ%ttNIp0SZ">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="time_delay" id="?:Ety-vpc^Bg@?sCvbcS">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="CSyOH`q7|@|rEn9VOW~(">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="XKUys.0IR0qLR`edVuB0" x="16" y="324">
+    <field name="NAME">fade out</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_repeat_ext" id="!1ZB}]rIYBM=W+WC7_u_">
+        <value name="TIMES">
+          <block type="math_number" id="-lL/*0mD6TNN{3`1f:`b">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="io_digitalwrite" id="HlA|AoM_#1aBuQuea~(h">
+            <field name="PIN">11</field>
+            <value name="STATE">
+              <block type="variables_get" id="PgV,LiVwzU9^%Wtf]Rc=">
+                <field name="VAR">bright ness</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="ez/e1O|UheH%oq7zrI1N">
+                <field name="VAR">bright ness</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="[39nAk3U:b0Pw;PQ)ow0">
+                    <field name="OP">MINUS</field>
+                    <value name="A">
+                      <block type="variables_get" id="I(~~6V/mDg_h4^@JMJdy">
+                        <field name="VAR">bright ness</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="+SLrH+:.e@rX7[vBmqrW">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="time_delay" id="i|/%^fxDUSPd+fW[/O9|">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="dI]3!+tQiGH/xU;Z^VxB">
+                        <field name="NUM">1000</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
